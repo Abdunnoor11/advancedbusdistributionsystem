@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Full Schedule
+{% endblock %}
+
+{% block link %}<link rel="stylesheet" href="{{ url_for('static', filename='full_schedule.css') }}">{% endblock %}
+
+{% block li %} <li><a class="login"href="/"><i class="fa fa-fw fa-user"></i> Index</a></li> {% endblock %}
+
+{% block body %}
+    <div class="schedule">
+        <div class="label">
+            <label>Full Schedule</label>
+        </div>
+
+        <div class="table">
+            <table id="customers">
+              <tr>
+                <th>From</th>
+                <th>Time</th>
+                <th>To</th>
+              </tr>
+              {% for schedule in schedules %}
+                  <tr>
+                    <td>{{ schedule.source }}</td>
+                    <td>{{ schedule.time }}</td>
+                    <td>{{ schedule.destination }}</td>
+                  </tr>
+              {% endfor %}
+
+            </table>
+        </div>
+    </div>
+{% endblock %}

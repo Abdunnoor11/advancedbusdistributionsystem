@@ -1,0 +1,91 @@
+.registration_form{
+    background-color: rgba(0, 0, 0, 0.48);
+    height: 250px;
+    width: 490px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 15px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.registration_form:hover{
+    width: 491px;
+    height: 251px;
+    box-shadow: 1px 1px 1px #202020;
+}
+
+.registration_form i{
+    font-size: 35px;
+    font-style: normal;
+    font-weight: bold;
+    font-family: serif;
+    color: #ffffff;
+    margin-left: 190px;
+}
+
+.signup_form{
+    height: 230px;
+    margin-top: 10px;
+}
+
+.row{
+    margin-left: 30px;
+}
+
+input[type=text], input[type=password], input[type=email]{
+  width: 250px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+}
+
+input[type=text]:hover, input[type=password]:hover, input[type=email]:hover{
+    box-shadow: 2px 2px 2px #a3a3a3;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display:  inline-grid;
+    font-size: 19px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 3px;
+    padding-top: 9px;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-left: 170px;
+  margin-top: 15px;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.column_label {
+  float: left;
+  width: 25%;
+  margin-top: 15px;
+}
+
+.column_input {
+  float: left;
+  width: 75%;
+  margin-top: 15px;
+  /* margin-left: 10px; */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display:  table;
+  clear: both;
+}

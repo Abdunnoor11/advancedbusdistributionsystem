@@ -1,0 +1,95 @@
+.container
+{
+    /* center contents */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: black;
+}
+
+*{
+    margin: 0px;
+}
+html{
+    margin: 0;
+    /* background: url(diu.jpg)no-repeat center center fixed; */
+    /* background-size: cover; */
+}
+
+nav{
+    height: 85px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.92);
+    position: relative;
+}
+
+.logo i{
+    /* margin-top: 6px; */
+    margin-left: 20px;
+    line-height: 80px;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    float: left;
+}
+
+.buttons{
+    margin: 0px;
+    float: right;
+    height: 85px;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li{
+	float: left;
+	padding: 35px;
+	background: none;
+}
+
+ul li a{
+	text-decoration: none;
+	color: white;
+    font-weight:bold;
+    font-family: sans-serif;
+	font-size: 16px;
+}
+
+ul li label{
+    text-decoration: none;
+	color: white;
+    font-weight:bold;
+    font-family: sans-serif;
+	font-size: 16px;
+}
+
+ul li a:hover{
+  background: none;
+  opacity: 0.5;
+}
+
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+main td
+{
+    /* left-align tables' cells */
+    text-align: left;
+}

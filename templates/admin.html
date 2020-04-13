@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Admin</title>
+  </head>
+
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand">Advanced Bus Distribution system</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+              <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <i class="nav-link" href="#">(Admin) <span class="sr-only">(current)</span></i>
+              </li>
+              </ul>
+              <a class="btn btn-outline-success my-2 my-sm-0" href="\admin_logout" type="submit">Log Out</a>
+      </nav>
+    <div class="container mt-2 mb-4 p-2 shadow bg-white">
+      <form action="/admin" method="post" style="padding: 40px" >
+        <div class= "form-row justify-content-center">
+            <div class=" col-auto">
+            </div>
+            <div class=" col-auto">
+              <input  type="text" name="Source" class="form-control" id="Source" placeholder="Source">
+            </div>
+            <div class="col-auto">
+              <input  type="text" name="Time" class="form-control" id="Time" placeholder="Time">
+          </div>
+            <div class=" col-auto">
+              <input  type="text" name="Destination" class="form-control" id="Destination" placeholder="Destination">
+            </div>
+            <div class="col-auto">
+              <input  type="submit" name="save" class="btn btn-info" value="Save">
+            </div>
+        </div>
+      </form>
+    </div>
+        <div style="width: 350px; margin: auto" >
+          <h3 style="font-weight: Bold">Journey Date: {{ journey_date }}</h3>
+        </div>
+      <div style="padding: 40px">
+      <table style=" width: 700px; margin:  auto;">
+        <thead >
+          <tr>
+            <!-- <th>No.</th> -->
+            <th>Source</th>
+            <th>Time</th>
+            <th>Destination</th>
+            <th>Total Students</th>
+            <th>Action</th>
+          </tr>
+          {% for schedule in schedules %}
+            <tr>
+              <!-- <td>{{ schedule.id }}</td> -->
+              <td>{{ schedule.source }}</td>
+              <td>{{ schedule.time }}</td>
+              <td>{{ schedule.destination }}</td>
+              <td style="text-align: center">{{ total[schedule.id] }} </td>
+              <td>
+                <a href="/delete/{{ schedule.id }}">Delete</a> <br>
+                <a href="/Edit/{{ schedule.id }}">Edit</a>
+              </td>
+            </tr>
+          {% endfor %}
+        </thead>
+        <tbody>
+
+        </tbody>
+
+      </table>
+    </div>
+
+  </body>
+</html>

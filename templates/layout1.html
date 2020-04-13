@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8"/>
+        <meta content="initial-scale=1, width=device-width" name="viewport"/>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="{{ url_for('static', filename='styles1.css') }}" rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <title>{% block title %}{% endblock %}</title>
+
+    </head>
+
+    <body>
+      <nav>
+          <div class="logo">
+              <i href="#">Advanced Bus Distribution System</i>
+          </div>
+          <div class="buttons">
+              <ul>
+                  {% block label %} {% endblock %}
+                  <li><a class="full_schedule" href="\full_schedule"><i class="fa fa-file"></i> Full Schedule</a></li>
+                  <li><a class="login"href="/login"><i class="fa fa-fw fa-user"></i> Log In</a></li>
+              </ul>
+          </div>
+      </nav>
+      <div class="container">
+          <main>
+              {% block main %}{% endblock %}
+            </main>
+      </div>
+
+    </body>
+
+</html>

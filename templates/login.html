@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block link %}<link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">{% endblock %}
+
+{% block li %} <li><a class="login"href="{{ url_for("signup") }}"><i class="fa fa-fw fa-user"></i> Sign Up</a></li> {% endblock %}
+
+{% block body %}
+    <div class="registration_form">
+        <i>Log In</i>
+        <form class="signup_form" action="{{ url_for("login") }}" method="post">
+            <div class="row">
+              <div class="column_label">
+                <label for="student_id">Student ID</label>
+              </div>
+              <div class="column_input">
+                <input type="text" id="student_id" name="student_id" placeholder="Student ID">
+              </div>
+            </div>
+            <div class="row">
+              <div class="column_label">
+                <label for="password">Password</label>
+              </div>
+              <div class="column_input">
+                <input type="password" id="password" name="password" placeholder="Password">
+              </div>
+            </div>
+            <div class="row">
+              <input type="submit" value="Submit">
+          </div>
+        </form>
+    </div>
+{% endblock %}

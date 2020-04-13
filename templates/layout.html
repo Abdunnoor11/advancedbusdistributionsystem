@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        {% block link %}{% endblock %}
+        <title>{% block title %}{% endblock %}</title>
+
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <i href="#">Advanced Bus Distribution System</i>
+            </div>
+            <div class="buttons">
+                <ul>
+                    {% block label %} {% endblock %}
+                    <li><a class="full_schedule" href="\full_schedule"><i class="fa fa-file"></i> Full Schedule</a></li>
+                    {% block li %} {% endblock %}
+                </ul>
+            </div>
+        </nav>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,101 @@
+.success{
+    background-color: rgba(0, 0, 0, 0.63);
+    height: 150px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 15px;
+    border-radius: 20px;
+    position: absolute;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.success:hover{
+    height: 151px;
+    width: 401px;
+    box-shadow: 1px 1px 1px #202020;
+}
+
+.success label{
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: 35px;
+    font-family: sans-serif;
+    color: #ffffff;
+}
+
+h3{
+    color: white;
+    font-size: 20px;
+}
+
+.booking_form{
+    background-color: rgba(0, 0, 0, 0.63);
+    height: 200px;
+    width: 590px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 15px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.booking_form label{
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #ffffff;
+}
+
+.row{
+    height: 80px;
+    margin-left: 50px;
+}
+
+.row label{
+    margin: 7px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.column{
+    float: left;
+    padding: 5px;
+}
+
+.custom-select{
+    position: relative;
+    font-family: Arial;
+    color: #000000;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+input[type=submit] {
+  background-color: rgb(5, 73, 7);
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-left: 250px;
+  margin-top: 20px;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(0, 102, 4);
+}

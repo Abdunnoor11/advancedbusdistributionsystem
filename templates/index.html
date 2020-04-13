@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block link %} <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}"> {% endblock %}
+{% block label %} <li><label>{{ name }}</label></li> {% endblock %}
+{% block li %}<li><a class="login" href="\logout"><i class="fa fa-fw fa-user"></i> Log Out</a></li> {% endblock %}
+
+{% block body %}
+    {% if Success %}
+        <div class="success">
+          <label>Success !</label>
+          <h3>Your Route {{ user_route.source }} to {{ user_route.destination }} at {{ user_route.time }}.</h3>
+        </div>
+    {% else %}
+        <div class="booking_form">
+          <form class="" action="{{ url_for('index') }}" method="post">
+              <label>Booking Form</label>
+              <div class="row">
+                  <label>Destination</label>
+                  <div class="column">
+                      <select class="custom-select" name="From">
+                          <option disabled selected>From:</option>
+                          {% for source in sources %}
+                            <option value="{{ source }}"> {{ source }}</option>
+                          {% endfor %}
+                      </select>
+                  </div>
+                  <div class="column">
+                      <select class="custom-select" name="Time">
+                          <option disabled selected>Time:</option>
+                          {% for t in time %}
+                            <option value="{{ t }}"> {{ t }}</option>
+                          {% endfor %}
+                      </select>
+                  </div>
+                  <div class="column">
+                      <select class="custom-select" name="To">
+                          <option disabled selected>To:</option>
+                          {% for destination in destinations %}
+                            <option value="{{ destination }}"" >{{ destination }}</option>
+                          {% endfor %}
+                      </select>
+                  </div>
+              </div>
+              <input type="submit" value="Submit">
+          </form>
+        </div>
+    {% endif %}
+{% endblock %}
